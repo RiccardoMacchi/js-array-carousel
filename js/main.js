@@ -32,6 +32,11 @@ btnCarosel.addEventListener("click",
             itemsArrey[activeItem].classList.remove("active")
             activeItem++;
             itemsArrey[activeItem].classList.add("active")
+        } else {
+            // Carosello infinito
+            itemsArrey[activeItem].classList.remove("active")
+            activeItem = 0
+            itemsArrey[activeItem].classList.add("active")
         }
     }
 )

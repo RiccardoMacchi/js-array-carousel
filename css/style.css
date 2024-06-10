@@ -20,18 +20,21 @@ body {
 
 #container_carosel img {
     width: 100%;
+    
 }
 
 .box_carosel {
     max-height: 550px;
     overflow: hidden;
-    display: none;
     border-radius: 10px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
 }
 
 .active {
-    display: inline-block;
+    display: flex;
 }
 
 #my_btn_next{
