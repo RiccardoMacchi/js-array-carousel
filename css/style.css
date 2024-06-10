@@ -5,23 +5,42 @@
     box-sizing: border-box;
 }
 
-img {
-    width: 100%;
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 #container_carosel {
     width: 70%;
-    margin: 40px auto;
+    position: relative;
+}
+
+#container_carosel img {
+    width: 100%;
 }
 
 .box_carosel {
-    display: flex;
-    align-items: center;
     max-height: 550px;
     overflow: hidden;
-    /* display: none; */
+    display: none;
+    border-radius: 10px;
+
 }
 
 .active {
     display: inline-block;
+}
+
+#my_btn_next{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%,-50%);
+    padding: 10px 20px;
+    background-color: #717378;
+    border-radius: 10px;
+    cursor: pointer;
 }
