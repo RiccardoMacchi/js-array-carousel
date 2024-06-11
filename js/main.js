@@ -44,8 +44,8 @@ itemsArrey[activeItem].classList.add("active");
 itemsBoxDx[activeItem].classList.add("opacity")
 
 // bottone click 
-let btnCarosel = document.getElementById("my_btn_next");
-btnCarosel.addEventListener("click",
+let btnCaroselNext = document.getElementById("my_btn_next");
+btnCaroselNext.addEventListener("click",
     () => {
         if (activeItem < imgArrey.length -1){
             itemsBoxDx[activeItem].classList.remove("opacity")
@@ -63,6 +63,28 @@ btnCarosel.addEventListener("click",
         }
     }
 )
+
+// bottone click indietro
+let btnCaroselPrev = document.getElementById("my_btn_prev");
+btnCaroselPrev.addEventListener("click",
+    () => {
+        if (activeItem === 0){
+            itemsBoxDx[activeItem].classList.remove("opacity")
+            itemsArrey[activeItem].classList.remove("active")
+            activeItem = imgArrey.length -1
+            itemsArrey[activeItem].classList.add("active")
+            itemsBoxDx[activeItem].classList.add("opacity")
+        } else { 
+            // Carosello infinito
+            itemsBoxDx[activeItem].classList.remove("opacity")
+            itemsArrey[activeItem].classList.remove("active")
+            activeItem--;
+            itemsArrey[activeItem].classList.add("active")
+            itemsBoxDx[activeItem].classList.add("opacity")
+        }
+    }
+)
+
 
 
 

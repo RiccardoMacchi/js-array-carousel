@@ -48,10 +48,23 @@ body {
     display: flex;
 }
 
+/* Regole bottoni */
 #my_btn_next{
     position: absolute;
-    top: 50%;
-    right: 0%;
+    top: 0%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    padding: 10px 20px;
+    background-color: #717378;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+#my_btn_prev {
+    position: absolute;
+    top: 100%;
+    right: 50%;
     transform: translate(-50%,-50%);
     padding: 10px 20px;
     background-color: #717378;
@@ -63,7 +76,7 @@ body {
 /* Regole box dx */
 
 #right_box {
-    width: 300px;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -77,3 +90,4 @@ body {
 .opacity {
     opacity: 0.7;
 }
+
